@@ -5,6 +5,7 @@ from . import views
 router = DefaultRouter()
 router.register(r'courses', views.CourseViewSet)
 router.register(r'lessons', views.LessonListAPIView, basename='lesson')
+router.register(r'categories', views.CategoryViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

@@ -15,7 +15,7 @@ def log_course_update(sender, instance, created, **kwargs):
     else:
         logger.info(f"Course updated: {instance.title} (ID: {instance.id})")
         
-        # Log which fields were updated if the instance has a _state attribute
+
         if hasattr(instance, '_state') and hasattr(instance._state, 'db'):
             db = instance._state.db
             if db:
